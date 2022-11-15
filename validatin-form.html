@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:invalid{
+            border: 1px solid red;
+        }
+    </style>
+
+
+ </head>
+ <body>
+    <form action="">
+        <p>
+            <fieldset>
+                <legend>Do you have a drive license <span aria-label="required">*</span></legend>
+                <input type="radio" required name="driver" id="r1"><label for="r1">yes</label>
+                <input type="radio" required name="driver" id="r2"><label for="r2">no</label>
+            </fieldset>
+        </p>
+
+        <p>
+            <label for="age">What is your age? </label>
+            <input type="number" name="age" id="age" max="80" min="5">
+        </p>
+        <p>
+            <label for="fruit">What is your favority fruit?<span aria-label="required">*</span></label>
+            <input type="text" name="fruit" id="fruit" list="l1" required pattern="[cC]herry|[bB]anana|Orange|Lemon">
+            <datalist id="l1">
+                <option>Banana</option>
+                <option>Cherry</option>
+                <option>Orange</option>
+                <option>Lemon</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="email">What's your email? </label>
+            <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </p>
+        <p>
+            <label for="message">Leave a short message</label>
+            <textarea name="message" id="message" maxlength="140" rows="5"></textarea>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+
+
+    </form>
+ </body>
+ </html>
